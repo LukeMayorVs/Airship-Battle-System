@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b8d027a640ba72446bb0b707eb288c38, type: 3}
+  m_Name: Airship
+  m_EditorClassIdentifier: 
+  m_hull: {fileID: 11400000, guid: d1a35945e5aeb154f82f5cbc8669088f, type: 2}
+  m_sideThrusters: {fileID: 11400000, guid: 81995a1ca7603704cb34fb52acfba0bd, type: 2}
+  m_engine: {fileID: 11400000, guid: 114577bebda6a7a46b9c16dd4e3faddf, type: 2}
+  m_deck: {fileID: 11400000, guid: e2377dc1a2c89474e9b90a09c27650ae, type: 2}
+  m_bridge: {fileID: 11400000, guid: 89460a03d8b10e04c95030b9dd4c6b06, type: 2}
+  m_name: 
+  m_moveDistance: 0
+  m_speed: 0
+  m_manoeurving: 0
+  m_armor: 0
+  m_health: 0
+  m_actionPoints: 0
+  m_weaponTypes: 
