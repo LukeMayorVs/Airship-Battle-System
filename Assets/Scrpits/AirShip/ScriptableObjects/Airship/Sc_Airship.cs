@@ -18,6 +18,18 @@ public class Sc_Airship : ScriptableObject
 
 
     //==========properties============
+    public string Name
+    {
+        get { return m_name; }
+    }
+    public int MoveDistance
+    {
+        get { return m_moveDistance; }
+    }
+    public int Speed
+    {
+        get { return m_speed; }
+    }
     public int Manoeuvring
     {
         get { return m_manoeurving; }
@@ -31,7 +43,7 @@ public class Sc_Airship : ScriptableObject
     {
         get { return m_health; }
     }
-    public int ActionPointa
+    public int ActionPoints
     {
         get { return m_actionPoints; }
     }

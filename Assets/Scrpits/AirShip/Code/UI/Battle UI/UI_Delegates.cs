@@ -10,10 +10,20 @@ public class LoadBattleScene
   
 }
 
-public class GenerateWeapons 
+public class UIGenerateAirshipWeapons
 {
 
-    public delegate void OnGenerateWeapons(List<Weapon_Base> weapons);
-    public static OnGenerateWeapons onGenerateWeapons;
+    public delegate void OnUIGenerateAirshipWeapons(List<Weapon_Base> weapons);
+    public static OnUIGenerateAirshipWeapons onUIGenerateAirshipGenerateWeapons;
 
 }
+
+public class UIGenerateAirshipStats
+{
+
+    public delegate void OnUIGenerateAirshipStats(Airship_Stats airshipStats);
+    public static OnUIGenerateAirshipStats onUIGenerateAirshipStats;
+
+}
+
+

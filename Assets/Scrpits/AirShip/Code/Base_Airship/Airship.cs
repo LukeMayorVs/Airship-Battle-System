@@ -14,15 +14,7 @@ public class Airship : MonoBehaviour
     [SerializeField] private Bridge m_bridge;
     [SerializeField] private List<Sc_WeaponTypes> m_Sc_weaponTypes;
     [SerializeField] private List<Weapon_Base> m_weaponTypesList = new List<Weapon_Base>();
-    //ship stats
-    [SerializeField] private string m_name;
-    [SerializeField] private int m_moveDistance;
-    [SerializeField] private int m_speed;
-    [SerializeField] private int m_manoeurving;
-    [SerializeField] private int m_armor;
-    [SerializeField] private int m_health;
-    [SerializeField] private int m_actionPoints;
-    [SerializeField] private List<Battle_Action> m_battle_Actions = new List<Battle_Action>();
+    [SerializeField] private Airship_Stats m_airship_Stats;
 
     public List<Weapon_Base> WeaponTypesList { get => m_weaponTypesList; set => m_weaponTypesList = value; }
 
@@ -31,13 +23,16 @@ public class Airship : MonoBehaviour
     void Start()
     {
         Setup();
-        //Passed in the ship 
-        LoadBattleScene.onBattleSceneLoad?.Invoke(this);
+        //Passed in the ship, FOr now use this to test for loading in the ui elements.
+        //Update once have a scene/loading manager and then trigger these events in there instead
+        UIGenerateAirshipWeapons.onUIGenerateAirshipGenerateWeapons.Invoke(m_weaponTypesList);
+        UIGenerateAirshipStats.onUIGenerateAirshipStats.Invoke(m_airship_Stats);
+        
     }
 
     private void Setup()
     {
-
+        m_airship_Stats = new Airship_Stats(m_sc_AirShip);
         ////loop through the weapones and create them
         //Create the default actions for all ships, rethink this to better store the value and cost;
 ;
@@ -81,8 +76,6 @@ public class Airship : MonoBehaviour
             m_weaponTypesList.Add(createWeapon);
 
         }
-        GenerateWeapons.onGenerateWeapons?.Invoke(m_weaponTypesList);
-        //Calulate the baseship stats
 
     }
 

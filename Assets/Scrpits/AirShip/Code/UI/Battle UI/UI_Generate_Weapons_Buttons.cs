@@ -12,7 +12,7 @@ public class UI_Generate_Weapons_Buttons : MonoBehaviour
 
     private void Start()
     {
-        GenerateWeapons.onGenerateWeapons += GenerateWeaponButtons;
+        UIGenerateAirshipWeapons.onUIGenerateAirshipGenerateWeapons += GenerateWeaponButtons;
     }
     // Start is called before the first frame update
     public void GenerateWeaponButtons(List<Weapon_Base> weapons)
